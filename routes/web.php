@@ -58,10 +58,7 @@ Route::get('/incubateur/demande/{id}',
     ->middleware('role:incubateur')
     ->name('decision.form');
 
-Route::post('/incubateur/decision/{id}',
-    [DemandeIncubationController::class, 'enregistrerDecision'])
-    ->middleware('role:incubateur')
-    ->name('decision.store');
+
     Route::get('/mes-demandes',
     [DemandeIncubationController::class,'mesDemandes'])
     ->middleware('role:etudiant')
