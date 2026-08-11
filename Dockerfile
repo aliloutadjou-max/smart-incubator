@@ -28,4 +28,4 @@ RUN composer install --no-dev --optimize-autoloader
 # Expose port 8080 (Render uses PORT env variable)
 EXPOSE 8080
 
-CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT:-8080}
+CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT:-8080} > /dev/null 2>&1
