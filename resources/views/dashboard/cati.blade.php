@@ -313,39 +313,27 @@
 
     </div>
 
-    <div class="quick-actions">
+   <div class="actions-grid">
 
-      <a href="{{ route('dashboard.cati') }}" class="quick-action-card">
+<a href="#" class="action-card">
+    <i class="bi bi-folder2-open"></i>
+    <h4>Dossiers reçus</h4>
+    <p>Consulter toutes les demandes.</p>
+</a>
 
-            <i class="bi bi-list-check"></i>
+<a href="#" class="action-card">
+    <i class="bi bi-search"></i>
+    <h4>Recherche</h4>
+    <p>Rechercher un dossier.</p>
+</a>
 
-            <h5>Dossiers reçus</h5>
+<a href="#" class="action-card">
+    <i class="bi bi-download"></i>
+    <h4>Exporter</h4>
+    <p>Exporter les données.</p>
+</a>
 
-            <p>Consulter toutes les demandes.</p>
-
-        </a>
-
-        <a href="#" class="quick-action-card">
-
-            <i class="bi bi-search"></i>
-
-            <h5>Recherche</h5>
-
-            <p>Rechercher un dossier.</p>
-
-     
- </a>
-        <a href="#" class="quick-action-card">
-
-            <i class="bi bi-file-earmark-arrow-down-fill"></i>
-
-            <h5>Exporter</h5>
-
-            <p>Exporter les données.</p>
-
-        </a>
-
-    </div>
+</div>
 
 </div>
 

@@ -187,16 +187,13 @@ public function storeDecision(Request $request,$id)
     $demande = DemandeIncubation::findOrFail($id);
 
     Decision::create([
-
-        'id_avis'=>$demande->projet->avis->id_avis,
-
-        'type_decision'=>$request->type_decision,
-
-        'commentaire'=>$request->commentaire,
-
-        'date_decision'=>now()
-
-    ]);
+    'id_demande' => $demande->id_demande,
+    'id_avis' => $demande->projet->avis->id_avis,
+    'id_incubateur' => 1,
+    'type_decision' => $request->type_decision,
+    'commentaire' => $request->commentaire,
+    'date_decision' => now()->toDateString(),
+]);
 
     $demande->statut_actuel = $request->type_decision;
 

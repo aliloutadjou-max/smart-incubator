@@ -79,38 +79,29 @@ onchange="this.form.submit()">
 <option value="">Tous les statuts</option>
 
 <option value="En attente"
-
-{{ request('statut')=='En attente'?'selected':'' }}>
-
-En attente
-
+    {{ request('statut') == 'En attente' ? 'selected' : '' }}>
+    En attente
 </option>
 
 <option value="Envoyé au CATI"
-
-{{ request('statut')=='Envoyé au CATI'?'selected':'' }}>
-
-Envoyé au CATI
-
+    {{ request('statut') == 'Envoyé au CATI' ? 'selected' : '' }}>
+    Envoyé au CATI
 </option>
 
-
-
+<option value="Avis disponible"
+    {{ request('statut') == 'Avis disponible' ? 'selected' : '' }}>
+    Avis disponible
+</option>
 
 <option value="Accepté"
-{{ request('statut')=='Accepté' ? 'selected' : '' }}>
-
-Accepté
-
+    {{ request('statut') == 'Accepté' ? 'selected' : '' }}>
+    Accepté
 </option>
 
 <option value="Refusé"
-{{ request('statut')=='Refusé' ? 'selected' : '' }}>
-
-Refusé
-
+    {{ request('statut') == 'Refusé' ? 'selected' : '' }}>
+    Refusé
 </option>
-
 </select>
 
 </form>

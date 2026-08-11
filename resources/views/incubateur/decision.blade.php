@@ -167,10 +167,12 @@
                 </label>
 
                 <div class="border rounded p-3 bg-light">
-
-                    {{ $avis->recommandation }}
-
-                </div>
+    @if($avis)
+        {{ $avis->recommandation }}
+    @else
+        <span class="text-danger">Aucune recommandation disponible.</span>
+    @endif
+</div>
 
             </div>
 

@@ -74,19 +74,6 @@ margin-left:0;
         </div>
 <div class="d-flex gap-2">
 
-<a href="{{ route('change.language','fr') }}"
-class="btn btn-sm btn-outline-primary">
-
-🇫🇷 FR
-
-</a>
-
-<a href="{{ route('change.language','ar') }}"
-class="btn btn-sm btn-outline-success">
-
-🇩🇿 AR
-
-</a>
 
 </div>
     @endif
@@ -100,6 +87,6 @@ class="btn btn-sm btn-outline-success">
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-</body>
+</body>َ
 
 </html>

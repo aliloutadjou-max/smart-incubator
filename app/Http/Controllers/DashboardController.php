@@ -146,16 +146,19 @@ public function demandes(Request $request)
 }
 
     // الفلترة
-    if ($request->filled('statut')) {
-if ($request->statut == 'avis_disponible') {
+if ($request->filled('statut')) {
 
-    $query->whereHas('projet.avis');
+    if ($request->statut === 'Avis disponible') {
 
-}
+        $query->where('statut_actuel', 'Avis disponible')
+              ->whereHas('projet.avis');
+
+    } else {
+
         $query->where('statut_actuel', $request->statut);
 
     }
-
+}
     $demandes = $query
         ->latest('id_demande')
         ->paginate(10)

@@ -53,10 +53,12 @@ Route::get('/incubateur/demande/{id}',
     [DemandeIncubationController::class, 'enregistrerAvis'])
     ->middleware('role:cati')
     ->name('cati.avis');
-    Route::get('/incubateur/decision/{id}',
-    [DemandeIncubationController::class, 'decisionForm'])
-    ->middleware('role:incubateur')
-    ->name('decision.form');
+  Route::get(
+    '/incubateur/decision/{id}',
+    [DemandeIncubationController::class, 'decisionForm']
+)
+->middleware('role:incubateur')
+->name('incubateur.decision');
 
 
     Route::get('/mes-demandes',
