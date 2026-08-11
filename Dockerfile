@@ -31,7 +31,7 @@ RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
 # Nginx Configuration
 RUN echo 'server {\n\
-    listen 80;\n\
+    listen PORT_HOLDER;\n\
     index index.php index.html;\n\
     error_log  /var/log/nginx/error.log;\n\
     access_log /var/log/nginx/access.log;\n\
@@ -51,6 +51,4 @@ RUN echo 'server {\n\
     }\n\
 }' > /etc/nginx/sites-available/default
 
-EXPOSE 80
-
-CMD php artisan migrate --force && php-fpm -D && nginx -g "daemon off;"
+CMD sed -i "s/PORT_HOLDER/${PORT:-80}/g" /etc/nginx/sites-available/default && php artisan migrate --force && php-fpm -D && nginx -g "daemon off;"
