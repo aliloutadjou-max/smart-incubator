@@ -4,342 +4,235 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+
 /* ===========================
    ROOT COLORS
 =========================== */
 
-:root{
-
-    --primary:#2D9CDB;
-    --primary-dark:#1B75BC;
-    --white:#ffffff;
-    --text:#2D3748;
-    --glass:rgba(255,255,255,.18);
-
+:root {
+    --primary: #2D9CDB;
+    --primary-dark: #1B75BC;
+    --white: #ffffff;
+    --text: #2D3748;
+    --glass: rgba(255, 255, 255, 0.18);
 }
+
 
 /* ===========================
    RESET
 =========================== */
 
-*{
-
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
+
 
 /* ===========================
    BODY
 =========================== */
 
-body{
+body {
+    min-height: 100vh;
 
-    min-height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-image:
-    linear-gradient(rgba(21,91,150,.45),rgba(21,91,150,.45)),
-    url('../images/background.jpg');
+        linear-gradient(
+            rgba(21, 91, 150, 0.45),
+            rgba(21, 91, 150, 0.45)
+        ),
+        url('../images/background.jpg');
 
-    background-size:cover;
-
-    background-position:center;
-
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 /* ===========================
-   CARD
+   AUTH CARD
 =========================== */
 
-.auth-card{
+.auth-card {
+    background: rgba(255, 255, 255, 0.16);
 
-    background:rgba(255,255,255,.16);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
-    backdrop-filter:blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
 
-    -webkit-backdrop-filter:blur(18px);
+    border-radius: 25px;
 
-    border:1px solid rgba(255,255,255,.25);
+    padding: 40px;
 
-    border-radius:25px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
 
-    padding:45px;
-
-    box-shadow:0 20px 45px rgba(0,0,0,.25);
-
-}
-.auth-card.login{
-
-    width:430px;
-
+    animation: fadeUp 0.7s ease;
 }
 
-.auth-card.register{
-
-    width:760px;
-
+.auth-card.login {
+    width: 430px;
 }
 
-.logo{
-
-    width:105px;
-
-    margin-bottom:18px;
-
+.auth-card.register {
+    width: 760px;
 }
 
-.auth-card h2{
 
-    color:white;
+/* ===========================
+   LOGO
+=========================== */
 
-    font-size:38px;
-
-    font-weight:700;
-
+.logo {
+    width: 105px;
+    margin-bottom: 18px;
 }
 
-.subtitle{
 
-    color:white;
+/* ===========================
+   TITLES
+=========================== */
 
-    opacity:.9;
-
-    font-size:18px;
-
-    margin-bottom:35px;
-
+.auth-card h2 {
+    color: white;
+    font-size: 38px;
+    font-weight: 700;
 }
+
+.subtitle {
+    color: white;
+    opacity: 0.9;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+
 /* ===========================
    INPUTS
 =========================== */
 
-.input-group-custom{
+.input-group-custom {
+    display: flex;
+    align-items: center;
 
-    display:flex;
+    background: rgba(255, 255, 255, 0.90);
 
-    align-items:center;
+    border-radius: 14px;
 
-    background:rgba(255,255,255,.90);
+    padding: 14px 18px;
+    margin-bottom: 18px;
 
-    border-radius:14px;
-
-    padding:14px 18px;
-
-    margin-bottom:18px;
-
-    transition:.3s;
-
+    transition: 0.3s;
 }
 
-.input-group-custom:hover{
-
-    transform:translateY(-2px);
-
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-
+.input-group-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.input-group-custom i{
-
-    color:#2D9CDB;
-
-    font-size:20px;
-
-    margin-right:12px;
-
+.input-group-custom i {
+    color: #2D9CDB;
+    font-size: 20px;
+    margin-right: 12px;
 }
 
-.input-group-custom input{
+.input-group-custom input {
+    border: none;
+    outline: none;
 
-    border:none;
+    width: 100%;
 
-    outline:none;
+    background: transparent;
 
-    width:100%;
-
-    background:transparent;
-
-    font-size:15px;
-
+    font-size: 15px;
 }
+
 
 /* ===========================
    BUTTON
 =========================== */
 
-.login-btn{
+.login-btn {
+    width: 100%;
+    height: 55px;
 
-    width:100%;
+    border: none;
+    border-radius: 14px;
 
-    height:55px;
+    background: linear-gradient(135deg, #4facfe, #007bff);
 
-    border:none;
+    color: white;
 
-    border-radius:14px;
+    font-size: 18px;
+    font-weight: 600;
 
-    background:linear-gradient(135deg,#4facfe,#007bff);
+    transition: 0.3s;
 
-    color:white;
-
-    font-size:18px;
-
-    font-weight:600;
-
-    transition:.3s;
-
-    cursor:pointer;
-
-}
-.login-btn:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:0 15px 30px rgba(0,123,255,.35);
-
+    cursor: pointer;
 }
 
-.login-btn:hover{
+.login-btn:hover {
+    transform: translateY(-3px);
 
-    transform:translateY(-2px);
-
-    box-shadow:0 12px 25px rgba(25,118,210,.35);
-
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.35);
 }
+
+
 /* ===========================
    REGISTER LINK
 =========================== */
 
-.register-link{
-
-    margin-top:25px;
-
+.register-link {
+    margin-top: 25px;
+    text-align: center;
 }
 
-.register-link p{
+.register-link p {
+    display: inline;
 
-    color:white;
+    color: white;
 
-    margin-bottom:6px;
-
-    font-size:14px;
-
+    margin-bottom: 6px;
+    font-size: 14px;
 }
 
-.register-link a{
+.register-link a {
+    color: white;
 
-    text-decoration:none;
+    font-weight: 600;
 
-    color:white;
+    text-decoration: none;
 
-    font-weight:600;
+    margin-left: 5px;
 
-    transition:.3s;
-
-    border-bottom:2px solid transparent;
-
+    transition: 0.3s;
 }
 
-.register-link a:hover{
-
-    color:#bde8ff;
-
-    border-color:#bde8ff;
-
+.register-link a:hover {
+    color: #bde8ff;
+    text-decoration: underline;
 }
+
+
 /* ===========================
-   AUTH CARD
+   ANIMATION
 =========================== */
 
-.auth-card{
+@keyframes fadeUp {
 
-    background:rgba(255,255,255,.16);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.25);
-
-    border-radius:25px;
-
-    padding:40px;
-
-    box-shadow:0 20px 45px rgba(0,0,0,.25);
-
-}
-
-.auth-card.login{
-
-    width:430px;
-
-}
-
-.auth-card.register{
-
-    width:760px;
-
-}
-.register-link{
-
-    margin-top:25px;
-
-    text-align:center;
-
-}
-
-.register-link p{
-
-    display:inline;
-
-    color:white;
-
-}
-
-.register-link a{
-
-    color:#ffffff;
-
-    font-weight:600;
-
-    text-decoration:none;
-
-    margin-left:5px;
-
-}
-
-.register-link a:hover{
-
-    text-decoration:underline;
-
-}
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(30px);
-
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
 
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-
-}
-
-.auth-card{
-
-    animation:fadeUp .7s ease;
 
 }
