@@ -22,4 +22,4 @@ RUN chmod -R 777 storage bootstrap/cache
 
 CMD php artisan key:generate --force && \
     php artisan storage:link --force && \
-    php -S 0.0.0.0:${PORT:-8080} -t public
+    php -S 0.0.0.0:${PORT:-8080} -t public public/index.php
