@@ -23,4 +23,4 @@ RUN composer install --no-dev --optimize-autoloader
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
 # Run migrations and start Laravel directly on public folder
-CMD php artisan migrate --force && php -S 0.0.0.0:${PORT:-8080} -t public
+CMD php artisan migrate --force || true && php -S 0.0.0.0:${PORT:-8080} -t public
