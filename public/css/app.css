@@ -1,0 +1,70 @@
+/* =====================================
+   GLOBAL IMPROVEMENTS
+===================================== */
+
+.page-title{
+    font-size:28px;
+    font-weight:700;
+    color:#1e3a8a;
+    margin-bottom:5px;
+}
+
+.page-subtitle{
+    color:#6b7280;
+    font-size:15px;
+    margin-bottom:25px;
+}
+
+.content-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.table{
+    border-collapse:separate;
+    border-spacing:0 8px;
+}
+
+.table tbody tr{
+    background:#fff;
+    transition:.25s;
+}
+
+.table tbody tr:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.table td,
+.table th{
+    vertical-align:middle;
+}
+
+.btn{
+    border-radius:10px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.form-control,
+.form-select{
+    border-radius:12px;
+}
+
+.badge{
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.card{
+    border:none;
+    border-radius:18px;
+}

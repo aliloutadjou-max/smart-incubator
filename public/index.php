@@ -2,7 +2,14 @@
 
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
-
+// Re-route static assets on cloud platforms if requested directly
+if (php_sapi_name() === 'cli-server') {
+    $url  = parse_url($_SERVER['REQUEST_URI']);
+    $file = __DIR__ . $url['path'];
+    if (is_file($file)) {
+        return false;
+    }
+}
 define('LARAVEL_START', microtime(true));
 
 // Determine if the application is in maintenance mode...
