@@ -17,6 +17,7 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
 
-RUN chmod -R 777 storage bootstrap/cache
+# إعطاء الصلاحيات الكاملة لـ storage و cache و public
+RUN chmod -R 777 storage bootstrap/cache public
 
-CMD ["sh", "-c", "php artisan storage:link --force || true; php -S 0.0.0.0:${PORT:-10000} -t public public/index.php"]
+CMD ["sh", "-c", "php artisan storage:link --force || true; php -S 0.0.0.0:${PORT:-10000} -t public"]
